@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -6,7 +6,9 @@ const Carousel = () => {
   return (
     <View className="bg-veryLight">
         <View className="flex-row items-center justify-center">
-            <View className=" w-52 h-52 bg-light rounded-[10px] mb-4 z-0 absolute left-0 top-5" />
+            <View className=" w-52 h-52 bg-light rounded-[10px] mb-4 z-0 absolute left-0 top-5">
+                <Image resizeMode={'cover'} source={require("../assets/media/shoes/nike_air_jordan_4_retro_off_white_sail.png")} className="w-full h-full"/>
+            </View>
             <View className=" w-60 h-60 bg-light rounded-[10px] mb-4 z-10" 
                 style={{
                     ...Platform.select({
@@ -21,8 +23,12 @@ const Carousel = () => {
                         },
                     })
                 }} 
-            />
-            <View className=" w-52 h-52 bg-light rounded-[10px] mb-4 absolute right-0 top-5 z-0" />
+            >
+                <Image resizeMode={'cover'} source={require("../assets/media/shoes/nike_air_jordan_4_retro_off_white_sail.png")} className="w-full h-full"/>
+            </View>
+            <View className=" w-52 h-52 bg-light rounded-[10px] mb-4 absolute right-0 top-5 z-0" >
+            <Image resizeMode={'cover'} source={require("../assets/media/shoes/nike_air_jordan_4_retro_off_white_sail.png")} className="w-full h-full"/>
+            </View>
         </View>
         <View className="w-4/5 mx-auto flex-row justify-between items-center">
             <View className="w-full">
@@ -32,7 +38,9 @@ const Carousel = () => {
                 <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>size <Text className="text-[10px]">8</Text></Text>
                 <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>owned by @johnsmith</Text>
             </View>
-            <Ionicons name={'person-circle-outline'} size={60} color={'#080808'} />
+            <View className=" w-16 h-16 rounded-full border-2 border-veryDark">
+                <Image resizeMode={'cover'} source={require("../assets/media/users/boy.jpg")} className="w-full h-full rounded-full"/>
+            </View>
         </View>
     </View>
 

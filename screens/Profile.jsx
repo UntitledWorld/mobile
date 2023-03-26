@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -15,7 +15,9 @@ const Profile = ({navigation}) => {
         </TouchableOpacity>
         <Text className=" text-4xl font-medium text-veryDark pt-5 w-full text-center mb-8" style={{ fontVariant: [ 'small-caps' ] }} >untitled</Text>
         <View className="w-full items-center">
-          <Ionicons name={'person-circle-outline'} size={170} color={'#080808'} />
+          <View className=" w-40 h-40 rounded-full border-4 border-veryDark">
+            <Image resizeMode={'cover'} source={require("../assets/media/users/boy.jpg")} className="w-full h-full rounded-full"/>
+          </View>
         </View>
         <Text className="w-full text-center text-veryDark font-ligt text-xl" style={{ fontVariant: [ 'small-caps' ] }}>@someone</Text>
         <Text className="w-full text-center text-veryDark font-bold text-sm" style={{ fontVariant: [ 'small-caps' ] }}>"virgil was here"</Text>
