@@ -3,8 +3,8 @@ import React from 'react'
 
 const Home = ({navigation}) => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View className="flex-1 justify-center items-center bg-veryLight">
+      <Text className="text-2xl font-bold">Home</Text>
       <Button
         title="login"
         onPress={() => navigation.navigate('Login')}
@@ -12,22 +12,6 @@ const Home = ({navigation}) => {
       <Button
         title="signup"
         onPress={() => navigation.navigate('Signup')}
-      />
-      <Button
-        title="profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
-      <Button
-        title="profile carousel"
-        onPress={() => navigation.navigate('ProfileCarousel')}
-      />
-      <Button
-        title="scan input"
-        onPress={() => navigation.navigate('ScanInput')}
-      />
-      <Button
-        title="scan output"
-        onPress={() => navigation.navigate('ScanOutput')}
       />
     </View>
   )

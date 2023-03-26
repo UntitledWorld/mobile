@@ -3,8 +3,8 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <View>
-      <Text>Signup</Text>
+    <View className="items-center justify-center flex-1 bg-veryLight">
+      <Text className="text-2xl font-bold">Signup</Text>
     </View>
   )
 }
