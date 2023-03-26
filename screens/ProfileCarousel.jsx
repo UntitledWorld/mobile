@@ -3,8 +3,8 @@ import React from 'react'
 
 const ProfileCarousel = () => {
   return (
-    <View>
-      <Text>ProfileCarousel</Text>
+    <View className="flex-1 justify-center items-center bg-veryLight">
+      <Text className="text-2xl font-bold">ProfileCarousel</Text>
     </View>
   )
 }
