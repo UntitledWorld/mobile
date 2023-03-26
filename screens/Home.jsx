@@ -1,19 +1,17 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, ScrollView } from 'react-native'
+import { SafeAreaView } from "react-native-safe-area-context";
 import React from 'react'
+import Collection from '../components/Collection';
 
 const Home = ({navigation}) => {
   return (
-    <View className="flex-1 justify-center items-center bg-veryLight">
-      <Text className="text-2xl font-bold">Home</Text>
-      <Button
-        title="login"
-        onPress={() => navigation.navigate('Login')}
-      />
-      <Button
-        title="signup"
-        onPress={() => navigation.navigate('Signup')}
-      />
-    </View>
+    <SafeAreaView className="flex-1 bg-veryLight w-4/5 mx-auto pt-5" edges={['top', 'left', 'right']}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+      <Text className="text-4xl font-medium text-veryDark" style={{ fontVariant: [ 'small-caps' ] }} >home</Text>
+      <Collection name="newly added" />
+      <Collection name="popular" />
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 

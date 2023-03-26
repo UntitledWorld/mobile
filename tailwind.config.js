@@ -11,7 +11,7 @@ module.exports = {
         'dark1' : '#7F7F7F',
         'dark2' : '#4C4C4C',
         'dark3' : '#191919',
-        'veryDark' : '#191919',
+        'veryDark' : '#080808',
         'uniRed' : '#B01317',
       }
     },
