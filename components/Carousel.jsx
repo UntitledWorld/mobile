@@ -1,6 +1,5 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Carousel = () => {
   return (

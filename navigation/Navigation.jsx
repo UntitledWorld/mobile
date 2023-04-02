@@ -21,7 +21,7 @@ const Navigation = () => {
               : 'home-outline';
           } else if (route.name === 'Scan') {
             iconName = focused ? 'scan-circle' : 'scan-outline';
-          } else if (route.name === 'Profile'){
+          } else if (route.name === 'ProfileStack'){
             iconName = focused ? 'person-circle' : 'person-circle-outline';
           }
           // You can return any component that you like here!
@@ -47,7 +47,7 @@ const Navigation = () => {
       })}>
       <Tab.Screen name="Home" component={HomeStackScreen} options={{headerShown: false}} />
       <Tab.Screen name="Scan" component={ScanStackScreen} options={{headerShown: false}}/>
-      <Tab.Screen name="Profile" component={ProfileStackScreen} options={{headerShown: false}}/>
+      <Tab.Screen name="ProfileStack" component={ProfileStackScreen} options={{headerShown: false}}/>
     </Tab.Navigator>
   </NavigationContainer>
   )

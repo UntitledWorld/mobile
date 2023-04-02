@@ -1,9 +1,10 @@
-import { View, Text, Button, ScrollView } from 'react-native'
+import { Text, ScrollView, Button } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
-import React from 'react'
+import React, { useState } from 'react'
 import Collection from '../components/Collection';
 
 const Home = ({navigation}) => {
+
   return (
     <SafeAreaView className="flex-1 bg-veryLight w-4/5 mx-auto" edges={['top', 'left', 'right']}>
       <ScrollView showsVerticalScrollIndicator={false}>
