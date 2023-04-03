@@ -20,7 +20,7 @@ const Profile = ({navigation}) => {
               <Image resizeMode={'cover'} source={require("../assets/media/users/boy.jpg")} className="w-full h-full rounded-full"/>
             </View>
           </View>
-          <Text className="w-full text-center text-veryDark font-ligt text-xl" style={{ fontVariant: [ 'small-caps' ] }}>@someone</Text>
+          <Text className="w-full text-center text-veryDark font-ligt text-xl" style={{ fontVariant: [ 'small-caps' ] }}>@leejavaa</Text>
           <Text className="w-full text-center text-veryDark font-bold text-sm" style={{ fontVariant: [ 'small-caps' ] }}>"virgil was here"</Text>
           <Collection name="closet" handler={(id) => navigation.navigate('ProfileCarousel', {shoeID : id})}/>
         </ScrollView>

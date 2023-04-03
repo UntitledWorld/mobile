@@ -11,7 +11,7 @@ const Collection = ({name, handler}) => {
   } else if (name === "popular"){
     shoeList = [3, 4, 1, 5];
   } else if (name === "closet"){
-    shoeList = [1, 5];
+    shoeList = [1, 4, 5];
   } else {
     console.log("Collection does not exist");
   }
