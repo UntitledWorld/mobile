@@ -18,7 +18,7 @@ const Carousel = ({id}) => {
       lv_skate_marine : console.log("Image not found");
 
   return (
-    <View className="bg-veryLight">
+    <View className="bg-white">
         <View className="flex-row items-center justify-center">
             <View className=" w-52 h-52 bg-light rounded-[10px] mb-4 z-0 absolute left-0 top-5">
                 <Image resizeMode={'cover'} source={image} className="w-full h-full"/>
