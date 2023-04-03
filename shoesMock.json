@@ -1,0 +1,54 @@
+{
+    "shoes" : [
+        {
+            "brand" : "nike",
+            "model" : "air jordan 4",
+            "colorway" : "retro off white sail",
+            "designer" : ["tinker hatfield", "virgil abloh"],
+            "size" : 8,
+            "release_date" : "25/07/2020",
+            "authorised_date" : "17/03/2023",
+            "authorised_by" : "untitled"
+        },
+        {
+            "brand" : "new balance",
+            "model" : "550",
+            "colorway" : "ald white green",
+            "designer" : ["steven smith", "teddy santis"],
+            "size" : 9,
+            "release_date" : "31/10/2022",
+            "authorised_date" : "17/03/2023",
+            "authorised_by" : "untitled"
+        },
+        {
+            "brand" : "nike",
+            "model" : "dunk low",
+            "colorway" : "UNC",
+            "designer" : ["peter moore"],
+            "size" : 8,
+            "release_date" : "24/06/2021",
+            "authorised_date" : "17/03/2023",
+            "authorised_by" : "untitled"
+        },
+        {
+            "brand" : "adidas yeezy",
+            "model" : "boost 350 v2",
+            "colorway" : "zebra",
+            "designer" : ["kanye west"],
+            "size" : 8,
+            "release_date" : "25/02/2017",
+            "authorised_date" : "17/03/2023",
+            "authorised_by" : "untitled"
+        },
+        {
+            "brand" : "louis vuitton",
+            "model" : "skate sneaker",
+            "colorway" : "marine",
+            "designer" : ["virgil abloh"],
+            "size" : 10,
+            "release_date" : "08/12/2022",
+            "authorised_date" : "17/03/2023",
+            "authorised_by" : "untitled"
+        }
+    ]
+}
