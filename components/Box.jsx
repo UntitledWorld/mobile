@@ -20,7 +20,7 @@ const Box = ({handler, id}) => {
   return (
     <View className="mb-6">
         <TouchableOpacity className=" w-36 h-36 bg-light rounded-[10px] z-10" 
-        onPress={() => handler()}
+        onPress={() => handler(id)}
         >
           <Image resizeMode={'cover'} source={image} className="w-full h-full"/>
         </TouchableOpacity>

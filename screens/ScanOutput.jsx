@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import BoxLarge from '../components/BoxLarge';
 
-const ScanOutput = ({navigation}) => {
+const ScanOutput = ({navigation, route}) => {
   return (
     <SafeAreaView className="flex-1 bg-veryLight w-4/5 mx-auto">
         <TouchableOpacity 
@@ -14,7 +14,7 @@ const ScanOutput = ({navigation}) => {
           <Ionicons name={'chevron-back-sharp'} size={20} color={'#080808'} />
         </TouchableOpacity>
         <Text className=" text-4xl font-medium text-veryDark pt-5 w-full text-center mb-8" style={{ fontVariant: [ 'small-caps' ] }} >untitled</Text>
-        <BoxLarge />
+        <BoxLarge id={route.params.shoeID}/>
         <Text className="font-light text-[10px] text-veryDark w-full text-center absolute bottom-7" style={{ fontVariant: [ 'small-caps' ] }}>these shoes were <Text className="text-uniRed font-medium">authorised by untitled</Text> on the 21st of march 2023. </Text>
     </SafeAreaView>
   )
