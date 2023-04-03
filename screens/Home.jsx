@@ -9,6 +9,7 @@ const Home = ({navigation}) => {
     <SafeAreaView className="flex-1 bg-veryLight w-4/5 mx-auto" edges={['top', 'left', 'right']}>
       <ScrollView showsVerticalScrollIndicator={false}>
       <Text className="text-4xl font-medium text-veryDark pt-5" style={{ fontVariant: [ 'small-caps' ] }} >home</Text>
+      <Button title='login' onPress={() => console.log('login click')} />
       <Collection name="newly added" handler={() => console.log('Do nothing')}/>
       <Collection name="popular" handler={() => console.log('Do nothing')}/>
       </ScrollView>
