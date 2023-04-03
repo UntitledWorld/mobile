@@ -9,8 +9,8 @@ const Home = ({navigation}) => {
     <SafeAreaView className="flex-1 bg-veryLight w-4/5 mx-auto" edges={['top', 'left', 'right']}>
       <ScrollView showsVerticalScrollIndicator={false}>
       <Text className="text-4xl font-medium text-veryDark pt-5" style={{ fontVariant: [ 'small-caps' ] }} >home</Text>
-      <Collection name="newly added" handler={() => console.log('Do nothing')}/>
-      <Collection name="popular" handler={() => console.log('Do nothing')}/>
+      <Collection name="newly added" handler={() => navigation.navigate('ShoeView')}/>
+      <Collection name="popular" handler={() => navigation.navigate('ShoeView')}/>
       </ScrollView>
     </SafeAreaView>
   )

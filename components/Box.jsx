@@ -1,7 +1,9 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
+import shoeData from "../shoesMock.json";
 
-const Box = ({handler}) => {
+const Box = ({handler, id}) => {
+
   return (
     <View className="mb-6">
         <TouchableOpacity className=" w-36 h-36 bg-light rounded-[10px] z-10" 
@@ -9,11 +11,11 @@ const Box = ({handler}) => {
         >
           <Image resizeMode={'cover'} source={require("../assets/media/shoes/nike_air_jordan_4_retro_off_white_sail.png")} className="w-full h-full"/>
         </TouchableOpacity>
-        <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>nike</Text>
+        <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.shoes[id - 1].brand}</Text>
         <Text className="text-veryDark font-medium text-xs" style={{ fontVariant: [ 'small-caps' ] }}>
-            air jordan <Text className="text-[10px]">4</Text>
+        {shoeData.shoes[id - 1].model}
         </Text>
-        <Text className="text-veryDark text-xs" style={{ fontVariant: [ 'small-caps' ] }}>retro off white sail</Text>
+        <Text className="text-veryDark text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.shoes[id - 1].colorway}</Text>
     </View>
   )
 }
