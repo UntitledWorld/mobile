@@ -15,13 +15,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.leejavaa.Untitled"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#f3f3f3"
-      }
+      },
+      "package": "com.leejavaa.Untitled"
     },
     "web": {
       "favicon": "./assets/favicon.png"
