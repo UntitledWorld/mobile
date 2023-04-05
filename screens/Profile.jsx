@@ -13,7 +13,7 @@ const Profile = ({navigation}) => {
             className="absolute top-[26px] right-0 z-10" 
           >
             <Ionicons name={'settings-outline'} size={25} color={'#080808'} />
-          </TouchableOpacity>
+        </TouchableOpacity>
           <Text className=" text-4xl font-medium text-veryDark pt-5 w-full text-center mb-8" style={{ fontVariant: [ 'small-caps' ] }} >untitled</Text>
           <View className="w-full items-center">
             <View className=" w-40 h-40 rounded-full border-4 border-veryDark">

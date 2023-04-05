@@ -2,8 +2,29 @@ import { Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import NfcManager, {NfcTech} from 'react-native-nfc-manager';
+
+NfcManager.start();
 
 const ScanInput = ({navigation}) => {
+
+  async function readNdef() {
+    try {
+      // register for the NFC tag with NDEF in it
+      await NfcManager.requestTechnology(NfcTech.Ndef);
+      // the resolved tag object will contain `ndefMessage` property
+      const tag = await NfcManager.getTag();
+      const message = await NfcManager.ndefHandler.getNdefMessage();
+      console.warn('Tag found', tag);
+      console.log('NFC Message:', message);
+    } catch (ex) {
+      console.warn('Oops!', ex);
+    } finally {
+      // stop the nfc scanning
+      NfcManager.cancelTechnologyRequest();
+    }
+  }
+
   return (
     <SafeAreaView className="h-full w-full bg-white">
         <View className="flex-1 w-4/5 mx-auto">
@@ -13,7 +34,10 @@ const ScanInput = ({navigation}) => {
           </View>
           <Text className="text-veryDark text-xl font-bold w-full text-center" 
             style={{ fontVariant: [ 'small-caps' ] }} 
-            onPress={() => navigation.navigate('ScanOutput', {shoeID: 2})} 
+            onPress={() => {
+              navigation.navigate('ScanOutput', {shoeID: 2})
+              readNdef();
+            }} 
           >
             scan a shoe
           </Text>
