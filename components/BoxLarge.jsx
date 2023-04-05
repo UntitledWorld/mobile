@@ -1,9 +1,9 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import shoeData from "../shoesMock.json";
 import ownerData from "../ownership.json";
 
-const BoxLarge = ({id}) => {
+const BoxLarge = ({shoeData}) => {
+  let id = 1;
 
   const nike_aj4_rofs = require("../assets/media/shoes/nike_air_jordan_4_retro_off_white_sail.png");
   const nb_550_awg = require("../assets/media/shoes/new_balance_550_ald_white_green.png");
@@ -14,19 +14,19 @@ const BoxLarge = ({id}) => {
   const batman = require("../assets/media/users/batman.png");
   const ferrari = require("../assets/media/users/ferrari.png");
 
-  var image = (id === 1) ?
-    nike_aj4_rofs : (id === 2) ?
-    nb_550_awg : (id === 3) ?
-    nike_dl_unc : (id === 4) ?
-    yeezy_v2_zebra : (id === 5) ?
-    lv_skate_marine : console.log("Image not found");
+  var image = (shoeData.colorway === "retro off white sail") ?
+    nike_aj4_rofs : (shoeData.colorway === "aime leon dore white green") ?
+    nb_550_awg : (shoeData.colorway === "UNC") ?
+    nike_dl_unc : (shoeData.colorway === "zebra") ?
+    yeezy_v2_zebra : (shoeData.colorway === "marine") ?
+    lv_skate_marine : {};
 
-  var userImage = (id === 1) ?
-    boy : (id === 2) ?
-    batman : (id === 3) ?
-    ferrari : (id === 4) ?
-    boy : (id === 5) ?
-    boy : console.log("Image not found");
+    var userImage = (shoeData.colorway === "retro off white sail") ?
+      boy : (shoeData.colorway === "aime leon dore white green") ?
+      batman : (shoeData.colorway === "UNC") ?
+      ferrari : (shoeData.colorway === "zebra") ?
+      boy : (shoeData.colorway === "marine") ?
+      boy : {};
 
   return (
     <View className="mx-auto">
@@ -49,10 +49,10 @@ const BoxLarge = ({id}) => {
         </View>
         <View className="flex-row justify-between items-center">
             <View>
-                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.shoes[id - 1].brand}</Text>
-                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.shoes[id - 1].model}</Text>
-                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.shoes[id - 1].colorway}</Text>
-                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>size <Text className="text-[10px]">{shoeData.shoes[id - 1].size}</Text></Text>
+                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.brand}</Text>
+                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.model}</Text>
+                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>{shoeData.colorway}</Text>
+                <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>size <Text className="text-[10px]">{shoeData.size}</Text></Text>
                 <Text className="text-veryDark font-bold text-xs" style={{ fontVariant: [ 'small-caps' ] }}>owned by @{ownerData.owners[id-1].username}</Text>
             </View>
             <View className=" w-16 h-16 rounded-full border-2 border-veryDark">

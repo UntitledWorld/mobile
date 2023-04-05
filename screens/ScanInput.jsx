@@ -13,7 +13,7 @@ const ScanInput = ({navigation}) => {
           </View>
           <Text className="text-veryDark text-xl font-bold w-full text-center" 
             style={{ fontVariant: [ 'small-caps' ] }} 
-            onPress={() => navigation.navigate('ScanOutput', {shoeID: 2})} 
+            onPress={() => navigation.navigate('ScanOutput', {shoeID: 3})} 
           >
             scan a shoe
           </Text>

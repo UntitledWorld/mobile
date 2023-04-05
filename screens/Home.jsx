@@ -1,6 +1,6 @@
-import { Text, ScrollView, Button, View } from 'react-native'
+import { Text, ScrollView, View } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
-import React, { useState } from 'react'
+import React from 'react';
 import Collection from '../components/Collection';
 
 const Home = ({navigation}) => {
@@ -10,8 +10,8 @@ const Home = ({navigation}) => {
       <View className="flex-1 w-4/5 mx-auto">
         <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="text-4xl font-medium text-veryDark pt-5" style={{ fontVariant: [ 'small-caps' ] }} >home</Text>
-        <Collection name="newly added" handler={(id) => navigation.navigate('ShoeView', {shoeID : id})}/>
-        <Collection name="popular" handler={(id) => navigation.navigate('ShoeView', {shoeID : id})}/>
+        <Collection name="newly added" handler={(shoeData) => navigation.navigate('ShoeView', {shoeData : shoeData})}/>
+        <Collection name="popular" handler={(shoeData) => navigation.navigate('ShoeView', {shoeData : shoeData})}/>
         </ScrollView>
       </View>
     </SafeAreaView>
