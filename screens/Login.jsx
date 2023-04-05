@@ -1,11 +1,81 @@
-import { View, Text } from 'react-native'
+import { View, Text, TextInput, Button, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Login = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-veryLight">
-      <Text className="text-2xl font-bold">Login</Text>
-    </View>
+    <SafeAreaView className="bg-white w-full h-full" edges={['top', 'left', 'right']}>
+      <View className="flex-1 w-4/5 mx-auto"> 
+      
+      <Text 
+      className=" text-4xl font-normal text-veryDark pt-5 w-full text-center mb-8" 
+      style={{ fontVariant: [ 'small-caps' ] }} >
+      untitled
+      </Text>
+      
+      <Text 
+      className="text-base  text-veryDark pb-1" 
+      style={{ fontVariant: [ 'small-caps' ] }}>
+      WELCOME BACK
+      </Text>    
+      
+      <View className = "my-4 h-14 text-xl shadow border rounded w-full py-3.5 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        <View className = "py-2 absolute top-1/4  -translate-y-1/4 left-3">
+        <Ionicons className = "" name={'person-outline'} size={25} color={'#080808'} />
+        </View>
+      <TextInput className = "w-full y- block pl-10 text-xl relative md:absolute"
+        placeholder = "Username" />
+      </View>
+
+      <View className = "my-4 h-14 text-xl shadow border rounded w-full py-4 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        <View className = "py-2 absolute top-1/4 transform -translate-y-1/4 left-3">
+        <Ionicons className = "" name={'lock-closed-outline'} size={25} color={'#080808'} />
+        </View>
+      <TextInput className = "w-full y- block pl-10 text-xl"
+        placeholder = "Passcode" 
+        secureTextEntry = {true}
+        for="password"/>
+      </View>
+
+      {/* <Button 
+      color={'#B01317'} 
+      title = "SIGN IN"/> */}
+      <TouchableOpacity activeOpacity={0.5} className= "my-4 h-14 text-xl shadow rounded-md w-full py-3.5 px-4 leading-tight focus:outline-none focus:shadow-outline bg-[#B01317]">
+        <Text className= "text-xl text-white text-center">SIGN IN</Text>
+      </TouchableOpacity>
+
+      <Text 
+      className="my-1 font-semibold text-base w-full text-center text-veryDark pb-1" 
+      style={{ fontVariant: [ 'small-caps' ] }}>
+      OR
+      </Text>
+
+      <TouchableOpacity activeOpacity={0.5} className= "my-4 h-14 text-xl shadow rounded-md w-full py-3.5 px-4 leading-tight focus:outline-none focus:shadow-outline bg-light">
+        <View className="absolute top-[12.5px] left-4">
+          <Ionicons className = "" name={'logo-google'} size={25} color={'#080808'} />
+        </View>
+        <Text className= "text-lg text-veryDark text-center ">SIGN IN WITH GOOGLE</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity activeOpacity={0.5} className= "my-4 h-14 text-xl shadow rounded-md w-full py-3.5 px-4 leading-tight focus:outline-none focus:shadow-outline bg-light">
+        <View className="absolute top-[12.5px] left-4">
+          <Ionicons className = "" name={'logo-apple'} size={25} color={'#080808'} />
+        </View>
+        <Text className= "text-lg text-veryDark text-center ">SIGN IN WITH APPLE</Text>
+      </TouchableOpacity>
+
+      <View className = "flex-row items-center justify-center">
+        <Text className="text-base  text-veryDark text-center" 
+          style={{ fontVariant: [ 'small-caps' ] }}>Don't have an account? 
+        </Text>
+        <TouchableOpacity className="">
+            <Text className = "text-uniRed underline"> Sign Up</Text>
+        </TouchableOpacity>
+      </View>
+
+      </View>
+    </SafeAreaView>
   )
 }
 
