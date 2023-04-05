@@ -1,4 +1,4 @@
-import { Text, ScrollView, View } from 'react-native'
+import { Text, ScrollView, View, Button } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from 'react';
 import Collection from '../components/Collection';

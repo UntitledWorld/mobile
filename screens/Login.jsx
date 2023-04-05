@@ -67,10 +67,10 @@ const Login = () => {
 
       <View className = "flex-row items-center justify-center">
         <Text className="text-base  text-veryDark text-center" 
-          style={{ fontVariant: [ 'small-caps' ] }}>Don't have an account? 
+          style={{ fontVariant: [ 'small-caps' ] }}>don't have an account? 
         </Text>
         <TouchableOpacity className="">
-            <Text className = "text-uniRed underline"> Sign Up</Text>
+            <Text style={{ fontVariant: [ 'small-caps' ] }} className = "text-uniRed underline"> sign up</Text>
         </TouchableOpacity>
       </View>
 
