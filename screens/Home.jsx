@@ -9,6 +9,7 @@ const Home = ({navigation}) => {
     <SafeAreaView className="bg-white w-full h-full" edges={['top', 'left', 'right']}>
       <View className="flex-1 w-4/5 mx-auto">
         <ScrollView showsVerticalScrollIndicator={false}>
+        {/* <Button title='login' onPress={() => navigation.navigate('Login')} /> */}
         <Text className="text-4xl font-medium text-veryDark pt-5" style={{ fontVariant: [ 'small-caps' ] }} >home</Text>
         <Collection name="newly added" handler={(shoeData) => navigation.navigate('ShoeView', {shoeData : shoeData})}/>
         <Collection name="popular" handler={(shoeData) => navigation.navigate('ShoeView', {shoeData : shoeData})}/>
