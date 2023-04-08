@@ -3,7 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
     <SafeAreaView className="bg-white w-full h-full" edges={['top', 'left', 'right']}>
       <View className="flex-1 w-4/5 mx-auto"> 
@@ -69,7 +69,10 @@ const Login = () => {
         <Text className="text-base  text-veryDark text-center" 
           style={{ fontVariant: [ 'small-caps' ] }}>Don't have an account? 
         </Text>
-        <TouchableOpacity className="">
+        <TouchableOpacity 
+        className="" 
+        onPress={()=> navigation.navigate('Signup')}
+        >
             <Text className = "text-uniRed underline"> Sign Up</Text>
         </TouchableOpacity>
       </View>
