@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#f3f3f3"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.leejavaa.Untitled"
@@ -24,19 +22,15 @@
         "backgroundColor": "#f3f3f3"
       },
       "package": "com.leejavaa.Untitled",
-      "permissions": [
-        "android.permission.NFC"
-      ]
+      "permissions": ["android.permission.NFC"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "react-native-nfc-manager"
-    ],
+    "plugins": ["react-native-nfc-manager"],
     "extra": {
       "eas": {
-        "projectId": "58422e35-46ea-45e8-9bc1-9bdcc87136b7"
+        "projectId": "PROJECT_ID"
       }
     }
   }
